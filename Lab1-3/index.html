@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="uk">
+    <meta charset="UTF-8">
+    <title>BuyList</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+<body>
+<div id="leftRightSide">
+<div class = "leftSide">
+    <div><div id="newGoodDiv"><input type="text" id="inputAddGood" placeholder="Назва товару"><button type="button" id="buttonAdd" data-tooltip="додати">Додати</button></div></div>
+</div>
+<div class = "rightSide">
+        <div class="rightSideHeading">Залишилося</div>
+        <div class="allLeft">
+        </div>
+        <div class="rightSideHeading">Куплено</div>
+         <div class="allBought"></div>
+    </div>
+</div>
+<div class="badge">
+    <div class="bigLetters boldLetters firstDiv">Buy List</div>
+    <div class="smallLetters">Created by:</div>
+    <div class="bigLetters">Ірина Горбачова</div>
+</div>
+<div class="template">
+<div class="allAboutGood bought">
+    <div class="goodName"><input type="text" class="newName"> <span>Template</span></div>
+    <div class="plusMinButtons">
+        <button type="button" class="minusButton" data-tooltip="зменшити">-</button>
+        <span  class="amount"></span>
+        <button type="button" class="plusButton" data-tooltip="збільшити">+</button>
+    </div>
+    <div class="buyDel">
+        <button type="button" class="buy" data-tooltip="куплено">Куплено</button>
+        <button type="button" class="notBuy" data-tooltip="не куплено">Не куплено</button>
+        <button type="button" class="delete" data-tooltip="видалити">×</button>
+    </div>
+</div>
+</div>
+<div class="templateRight">
+    <div class="goodInList"><span class="goodInListName">Template</span><div class="number">1</div ></div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

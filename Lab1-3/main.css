@@ -1,0 +1,306 @@
+body{
+    background-color: lightgray;
+    font-family: "Arial Narrow", sans-serif;
+}
+
+.leftRightSide{
+    margin: 5%;
+    margin-left:10%;
+}
+.leftSide{
+    width: 58%;
+    margin-bottom:5px;
+    max-width: 600px;
+    min-width: 370px;
+    float:left;
+    background-color:white;
+    height: auto;
+}
+.leftSide div #newGoodDiv{
+    padding:3%;
+}
+
+.rightSide{
+    width:37%;
+    display:inline-block;
+    max-width: 400px;
+    min-width:330px;
+    margin-left:2%;
+    height:auto;
+    background-color: white;
+}
+@media screen and (max-width: 1200px) {
+    #leftRightSide {
+        margin-left: 5%;
+    }
+    .leftSide .allAboutGood{
+        max-width:none;
+    }
+}
+
+@media screen and (max-width: 940px){
+    .leftSide{
+        width:100%;
+        max-width: none;
+    }
+    .rightSide{
+        width:100%;
+        max-width:none;
+        min-width:370px;
+        margin-left: 0;
+    }
+}
+.newGoodDiv{
+    height:35px;
+}
+
+.buttonAdd{
+    width:18%;
+    height:100%;
+    background-color:blue;
+    color:white;
+    box-sizing: border-box;
+}
+.inputAddGood{
+    width:80%;
+    height:100%;
+    padding-left:1%;
+    color: gray;
+    box-sizing: border-box;
+}
+ .allAboutGood{
+    width:100%;
+    height:45px;
+    margin-left:2%;
+    max-width: 600px;
+    margin-top:4%;
+    border-top:1px solid lightgrey;
+}
+
+ .allAboutGood .goodName{
+    height:100%;
+    width:31%;
+    float:left;
+    max-width:200px;
+    padding:2%;
+    font-size: large;
+    overflow-x: auto;
+}
+
+ .allAboutGood .plusMinButtons{
+    width:31%;
+    height:100%;
+     margin-top:2%;
+    display: inline-block;
+     box-sizing: border-box;
+    background-color: white;
+    text-align: center;
+}
+ .allAboutGood .plusMinButtons button{
+    border-radius: 100%;
+    width: 35px;
+    height:35px;
+    font-weight: bold;
+    color:white;
+    font-size: large;
+}
+ .allAboutGood .plusMinButtons .plusButton{
+    background-color: limegreen;
+}
+ .allAboutGood .plusMinButtons .minusButton{
+    background-color: #ce201b;
+}
+
+.leftSide .allAboutGood .plusMinButtons .amount{
+    background-color: lightgray;
+    display: inline-block;
+    text-align: center ;
+    border-radius: 25%;
+    width:16%;
+    height:55%;
+    padding-top:3%;
+    font-weight: bold;
+
+}
+
+ .allAboutGood .buyDel{
+    display:inline-block;
+    width:31%;
+    max-width:200px;
+    text-align: right;
+}
+
+.allAboutGood .buyDel .buy{
+    width:70px;
+    height:35px;
+    border-radius:15%;
+    padding:5%
+}
+
+.allAboutGood .buyDel .delete{
+    border-radius: 25%;
+    width:35px;
+    height:35px;
+    padding:3%;
+    font-weight: bold;
+    background-color: #ce201b;
+    font-size: large;
+    color:white;
+    margin-right: 5px;
+    border:none;
+}
+
+.rightSideHeading{
+    font-size: large;
+    font-weight: bold;
+    font-family: "Arial Black", sans-serif;
+    border-bottom: 1px solid lightgrey;
+    padding: 5px;
+}
+
+.rightSide .allLeft,.allBought{
+    padding-top:3%;
+    padding-left:3%;
+    border-bottom: 1px solid lightgrey;
+}
+
+.goodInList{
+    display:inline-block;
+    border-radius:10px;
+    width:25%;
+    height:25px;
+    padding: 1% 1% 1% 2%;
+    margin-bottom: 5px;
+    margin-left:5px;
+    background-color: lightgrey;
+}
+
+.goodInList span{
+    display:inline-block;
+    max-width:70%;
+    overflow: hidden;
+    margin-top:3%;
+}
+.goodInList .number{
+    display:inline-block;
+    border-radius: 100%;
+    background-color: orange;
+    width:20px;
+    height:15px;
+    padding:2%;
+    padding-bottom:7px;
+    float:right;
+    text-align: center;
+    font-weight: bold;
+    color:white;
+}
+
+.badge{
+    width:200px;
+    height:250px;
+    background-color: purple;
+    font-family: Tahoma, serif;
+    text-align: center;
+    border-radius: 15% 15% 0 0;
+    color:white;
+    position:fixed;
+    left:25px;
+    bottom:-200px;
+    padding: 10px;
+    transition: all 3s ease;
+
+}
+.badge:hover {
+    background-color: darkblue;
+    transform: translateY(-200px);
+}
+
+.badge .smallLetters{
+    font-size: 20px;
+}
+.badge .bigLetters{
+    font-size: 32px;
+}
+.badge .boldLetters{
+    font-weight: bold;
+}
+
+@media print {
+    .badge{
+        background-color: white;
+        border: 1px solid purple;
+        color:black;
+    }
+    .badge .firstDiv{
+        display:none;
+    }
+}
+
+.badge .firstDiv{
+    margin-bottom: 25px;
+}
+
+button{
+    position:relative;
+}
+button::before{
+    content:attr(data-tooltip);
+    display:inline-block;
+    background-color: purple;
+    border-radius: 25px;
+    color:white;
+    text-align: center;
+    font-size:15px;
+    font-family: Tahoma, serif;
+    font-weight: 300;
+    width:0;
+    height:0;
+    padding:2px;
+    position:absolute;
+    left:50%;
+    visibility:hidden;
+    overflow:hidden;
+    transition:all 0.5s linear;
+}
+button:hover::before{
+    transform: translateY(-150%);
+    width:100px;
+    height:20px;
+    margin-left:-50px;
+    visibility: visible;
+}
+
+.template,.templateRight{
+    display:none;
+}
+
+.allAboutGood .newName{
+    height:20px;
+    width:60%;
+    display:none;
+}
+
+.bought .buyDel .notBuy{
+    display:none;
+}
+
+.notBought div,.notBought .goodInListName{
+    text-decoration: line-through;
+}
+.notBought .buyDel button{
+    display:none;
+}
+
+.notBought .buyDel .notBuy{
+    width:70%;
+    height:35px;
+    border-radius:10px;
+    padding:2%;
+    display:inline-block;
+    margin-top:10px;
+    margin-right:10px;
+}
+
+.notBought .plusMinButtons button{
+    display:none;
+}
