@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- LESS основний файл -->
+    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less"/>
+    <!-- LESS JavaScript компілятор -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="main-pizza">
+        <div class="inner-container">
+            <div class="page-title">
+                <h2>
+                    <span class="label-top">Усі піци</span>
+                    <span class="orange-circle">8</span>
+                </h2>
+            </div>
+            <div class="buttons">
+                <a class="btn btn-warning btn-md pressed" id="all">Усі</a>
+                <a class="btn btn-default btn-md" id="meat">Мясні</a>
+                <a class="btn btn-default btn-md" id="pineapple">З ананасами</a>
+                <a class="btn btn-default btn-md" id="mushroom">З грибами</a>
+                <a class="btn btn-default btn-md" id="ocean">З морепродуктами</a>
+                <a class="btn btn-default btn-md" id="vegan">Вега</a>
+            </div>
+        </div>
+        <div class="row" id="pizza_list">
+            <template>
+                <div class="col-sm-6 col-md-4 pizza-card">
+                    <div class="thumbnail">
+                        <span class="label-danger new-badge label">Нова</span>
+                        <img src="assets/images/pizza_7.jpg" class="pizza_img">
+                        <div class="caption"><h3>Імпреза</h3>
+                            <div class="type-description"><h6>М'ясна піца</h6></div>
+                            <p class="description"><h5>Балик, салямі, куриця, сир моцарелла, сир рокфорд, ананаси,
+                                томатна паста,
+                                петрушка</h5></p>
+                            <div class="left-info col-xs-6">
+                                <div class="diameter">
+                                    <img class="size-img" src="assets/images/size-icon.svg">
+                                    <span class="size">40</span>
+                                </div>
+                                <div class="weight">
+                                    <img class="weight-img" src="assets/images/weight.svg">
+                                    <span class="size">40</span>
+                                </div>
+                                <div class="price">99</div>
+                                <a class="btn btn-warning">Купити</a>
+                            </div>
+                            <div class="right-info col-xs-6">
+                                <div class="diameter">
+                                    <img class="size-img" src="assets/images/size-icon.svg">
+                                    <span class="size">40</span>
+                                </div>
+                                <div class="weight">
+                                    <img class="weight-img" src="assets/images/weight.svg">
+                                    <span class="size">40</span>
+                                </div>
+                                <div class="price">99</div>
+                                <a class="btn btn-warning">Купити</a>
+                            </div>
+                            <p class="empty">.</p>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</div>
+<div class="top-panel">
+    <div class="header-row">
+        <div class="header-row-phone-number visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+            (044) 222 5 222
+        </div>
+        <div class="header-row-hours-of-work visible-lg-inline-block visible-md-inline-block">
+            24 години/ 7 днів на тиждень
+        </div>
+        <div class="free-delivery visible-lg-inline-block">
+            Безкоштовна доставка піци
+        </div>
+        <a class="btn btn-warning sign-in hidden-xs">Ввійти</a>
+    </div>
+    <div class="header-down">
+        <div class="pizza-title visible-lg-inline-block visible-md-inline-block visible-sm-inline-block">
+            Піца
+        </div>
+        <a class="btn btn-warning sign-in-xs visible-xs-inline-block">Ввійти</a>
+    </div>
+</div>
+<div class="right-panel">
+    <div class="top-part">
+        <span class="order-title">
+            Замовлення
+        <span class="badge orange-count-orders">1</span>
+        </span>
+        <span class="clear-order-wrap clear-order">
+            Очистити замовлення
+        </span>
+    </div>
+    <div class="main-part" id="cart">
+        <template>
+            <div class="order">
+                <img class="img-aside pizza-img" src="assets/images/pizza_7.jpg">
+                <span class="order-pizza-name">Імпреза (Велика)</span>
+                <div class="order-info">
+                    <img class="size-img" src="assets/images/size-icon.svg">
+                    <span class="size">40</span>
+                    <img class="weight-img" src="assets/images/weight.svg">
+                    <span class="weight">660</span>
+                </div>
+                <div class="price-order">
+                    <span class="how-money">169</span>
+                    <span class="minus btn btn-xs btn-danger button-circle">
+                        <span class="sign">?</span>
+                    </span>
+                    <span class="order-counter">1</span>
+                    <span class="plus btn btn-xs btn-success button-circle">
+                       <span class="sign">+</span>
+                    </span>
+                    <span class="count-clear btn btn-xs btn-default button-circle">
+                       <span class="sign">?</span>
+                    </span>
+                </div>
+            </div>
+        </template>
+    </div>
+    <div class="bottom-part">
+        <span class="sum-order-title" style="display: inline;">
+                    Сума замовлення
+                </span>
+        <span class="sum-order-number" style="display: block;">169</span>
+        <div class="order-done-button">
+            <button type="button" class="btn btn-warning btn-lg btn-block butt-do-order">
+                Замовити
+            </button>
+        </div>
+    </div>
+</div>
+<div class="flag-KMA">
+    <span class="title"><h4>PIZZA </h4>KMA</span><img src="assets/images/discount.svg">
+</div>
+<div class="discount-flag">
+    <div class="discount-img"></div>
+    <div class="discount-title">
+        <span>ЦЬОГО ТИЖНЯ</span>
+        <span>НА ВСЕ</span>
+    </div>
+    <div class="discount-price">
+        -20%
+    </div>
+</div>
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

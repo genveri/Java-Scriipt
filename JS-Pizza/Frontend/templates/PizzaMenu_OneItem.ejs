@@ -1,0 +1,68 @@
+<%
+function getIngredientsArray(pizza) {
+    //Отримує вміст піци
+    var content = pizza.content;
+    var result = [];
+    //Object.keys повертає масив ключів в об’єкті JavaScript
+    Object.keys(content).forEach(function (key) {
+        //a.concat(b) створює спільний масив із масивів a та b
+        result = result.concat(content[key]);
+    });
+    return result;
+}
+%>
+
+<div class="col-sm-6 col-md-4 pizza-card">
+    <div class="thumbnail">
+        <% if (pizza.is_new) { %>
+        <span class="label-danger new-badge label">Нова</span>
+        <% } else if (pizza.is_popular) { %>
+        <span class="label-success new-badge label">Популярна</span>
+        <% } %>
+        <img src="<%= pizza.icon %>" class="pizza_img">
+        <div class="caption"><h3><%= pizza.title %></h3>
+            <div class="type-description"><h6><%= pizza.type %></h6></div>
+            <p class="description"><h5><%= getIngredientsArray(pizza).join(', ') %></h5></p>
+            <div class="row">
+                <% if ("small_size" in pizza) { %>
+                <div class=
+                     <% if ("big_size" in pizza) { %>
+                     "left-info col-xs-6">
+                    <% } else { %>
+                    "left-info col-xs-12">
+                    <% } %>
+                    <div class="diameter">
+                        <img class="size-img" src="assets/images/size-icon.svg">
+                        <span class="size"><%= pizza.small_size.size %></span>
+                    </div>
+                    <div class="weight">
+                        <img class="weight-img" src="assets/images/weight.svg">
+                        <span class="size"><%= pizza.small_size.weight %></span>
+                    </div>
+                    <div class="price"><%= pizza.small_size.price %></div>
+                    <a class="btn btn-warning buy-small">Купити</a>
+                </div>
+                <% } %>
+                <% if ("big_size" in pizza) { %>
+                <div class=
+                     <% if ("small_size" in pizza) { %>
+                     "right-info col-xs-6">
+                    <% } else { %>
+                    "right-info col-xs-12">
+                    <% } %>
+                    <div class="diameter">
+                        <img class="size-img" src="assets/images/size-icon.svg">
+                        <span class="size"><%= pizza.big_size.size %></span>
+                    </div>
+                    <div class="weight">
+                        <img class="weight-img" src="assets/images/weight.svg">
+                        <span class="size"><%= pizza.big_size.weight %></span>
+                    </div>
+                    <div class="price"><%= pizza.big_size.price %></div>
+                    <a class="btn btn-warning buy-big">Купити</a>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>

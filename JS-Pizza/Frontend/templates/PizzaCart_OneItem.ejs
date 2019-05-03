@@ -1,0 +1,23 @@
+<div class="order">
+    <img class="img-aside pizza-img" src="<%= pizza.icon%>">
+    <span class="order-pizza-name"><%= pizza.title%> (<%= (size == "big_size") ? "Велика" : "Мала"%>)</span>
+    <div class="order-info">
+        <img class="size-img" src="assets/images/size-icon.svg">
+        <span class="size"><%= pizza[size].size %></span>
+        <img class="weight-img" src="assets/images/weight.svg">
+        <span class="weight"><%= pizza[size].weight %></span>
+    </div>
+    <div class="price-order">
+        <span class="how-money"><%= pizza[size].price %></span>
+        <span class="minus btn btn-xs btn-danger button-circle">
+                        <span class="sign">−</span>
+                    </span>
+        <span class="order-counter"><%= quantity%></span>
+        <span class="plus btn btn-xs btn-success button-circle">
+                       <span class="sign">+</span>
+                    </span>
+        <span class="count-clear btn btn-xs btn-default button-circle">
+                       <span class="sign">×</span>
+                    </span>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+.pizza-card {
+  position: relative;
+
+  .pizza-img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  h3 {
+    color: @mainColor;
+    background-color: lighten(@mainColor, 45%);
+    font-weight: 600;
+    font-size: 30px;
+  }
+  h6 {
+    color: #a3a0a0;
+  }
+
+  .new-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+  }
+}
+
+.caption {
+  padding: 10px;
+}
+
+.page-title {
+  text-align: center;
+  position: inherit;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.orange-circle {
+  color: white;
+  display: inline-block;
+  border-radius: 50%;
+  background: @mainColor;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 10px;
+  position: relative;
+  padding: 6px;
+
+}
+
+.label-top {
+  display: inline-block;
+  color: black;
+  position: relative;
+  font-size: 30px;
+  font-weight: 500;
+  padding-right: 5px;
+}
+
+.buttons {
+  box-sizing: border-box;
+  padding-bottom: 30px;
+  display: block;
+  text-align: center;
+
+}
+
+.btn-warning {
+  opacity: 1;
+  background: rgb(234, 134, 16, 1);
+
+}
+
+.btn-default {
+  border: none;
+  color: @mainColor;
+}
+
+.left-info {
+  padding: 0;
+  text-align: center;
+}
+
+.right-info {
+  padding: 0;
+  text-align: center;
+}
+
+.price::after {
+  content: "грн.";
+  display: block;
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.empty {
+  font-size: 1px;
+  padding: 0;
+  margin: 0;
+}
+
+h5 {
+  font-size: 13px;
+  height: 6rem;
+}
